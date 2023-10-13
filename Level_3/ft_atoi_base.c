@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 18:18:28 by cha               #+#    #+#             */
-/*   Updated: 2023/10/13 09:53:29 by chruhin          ###   ########.fr       */
+/*   Created: 2023/06/13 18:18:28 by chruhin           #+#    #+#             */
+/*   Updated: 2023/10/13 15:40:07 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ int	ft_atoi_base(const char *s, int base)
 int	main(void)
 {
 	printf("%d\n", ft_atoi_base("ff", 16));
+	return (0);
 }
