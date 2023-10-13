@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/08 09:36:39 by cha               #+#    #+#             */
-/*   Updated: 2023/10/13 10:15:04 by chruhin          ###   ########.fr       */
+/*   Created: 2023/07/08 09:36:39 by chruhin           #+#    #+#             */
+/*   Updated: 2023/10/13 15:48:38 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,32 +50,32 @@ $>
 
 #include <unistd.h>
 
- void	rostring(char *s)
- {
- 	int	i = 0;
- 	int	flag = 0;
+void	rostring(char *s)
+{
+	int	i = 0;
+	int	flag = 0;
 
- 	while (s[i] == ' ' || s[i] == '\t')
- 		i++;
- 	int	start = i;
- 	while (s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
- 		i++;
- 	int	end = i;
- 	while (s[i] == ' ' || s[i] == '\t')
- 		i++;
- 	while (s[i])
- 	{
- 		while (s[i] == ' ' && s[i+1] == ' ' || (s[i] == '\t' && s[i+1] == '\t'))
- 			i++;
- 		if (s[i] == ' ' || s[i] == '\t')
- 			flag = 1;
- 		write (1, &s[i++], 1);
- 	}
- 	if (flag == 1)
- 		write (1, " ", 1);
- 	while (start < end)
- 		write (1, &s[start++], 1);
- }
+	while (s[i] == ' ' || s[i] == '\t')
+		i++;
+	int	start = i;
+	while (s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
+		i++;
+	int	end = i;
+	while (s[i] == ' ' || s[i] == '\t')
+		i++;
+	while (s[i])
+	{
+		while (s[i] == ' ' && s[i+1] == ' ' || (s[i] == '\t' && s[i+1] == '\t'))
+			i++;
+		if (s[i] == ' ' || s[i] == '\t')
+			flag = 1;
+		write (1, &s[i++], 1);
+	}
+	if (flag == 1)
+		write (1, " ", 1);
+	while (start < end)
+		write (1, &s[start++], 1);
+}
 
 int	main(int argc, char *argv[])
 {

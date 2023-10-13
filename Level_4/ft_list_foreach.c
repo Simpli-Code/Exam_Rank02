@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 15:17:56 by cha               #+#    #+#             */
-/*   Updated: 2023/10/13 10:42:30 by chruhin          ###   ########.fr       */
+/*   Created: 2023/06/09 15:17:56 by chruhin           #+#    #+#             */
+/*   Updated: 2023/10/13 15:46:49 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct		s_list
 	struct s_list	*next;
 	void			*data;
 }					t_list;
+
 
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
